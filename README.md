@@ -72,27 +72,11 @@ dotnet run --project InferNetAR.Console -- --input data.csv --model arx --ar-ord
 dotnet run --project InferNetAR.Console -- --help
 ```
 
-## Project Structure
-
-```
-InferNetAR/
-├── InferNetAR.Console/          # Main console application
-│   ├── Program.cs               # Entry point with CSV input and CLI
-│   ├── ARModel.cs               # AR(p) model implementation
-│   ├── ARXModel.cs              # ARX(p,q) model implementation
-│   └── InferNetAR.Console.csproj
-├── InferNetAR.sln               # Solution file
-├── sample_ar.csv                # Sample data for AR model
-├── sample_arx.csv               # Sample data for ARX model
-└── README.md                    # This file
-```
-
 ## Getting Started
 
 ### Prerequisites
 
 - .NET 8 SDK
-- Visual Studio 2022 or VS Code with C# extension
 
 ### Installation
 
@@ -444,23 +428,6 @@ ARXModel(int arOrder, int exogOrder, int exogenousCount, double noiseVariancePri
 - `(double lower, double upper)[] GetExogCoefficientCredibleIntervals(double probability = 0.95)` - Get exogenous coefficient intervals
 - `void PrintSummary()` - Print formatted summary with ARX(p,q) notation
 
-## Applications
-
-AR(p) models are widely used in:
-
-- **Economics**: GDP growth, inflation, unemployment rates
-- **Finance**: Stock prices, exchange rates, volatility modeling
-- **Engineering**: Signal processing, control systems
-- **Climate Science**: Temperature, precipitation time series
-- **Healthcare**: Patient monitoring, disease progression
-
-## Advanced Features
-
-- **Model Selection**: Automatic order selection using information criteria (AIC, BIC)
-- **Seasonal AR Models**: Extension to SARIMA models
-- **Multivariate AR**: Vector autoregressive (VAR) models
-- **Non-linear Extensions**: Threshold AR, GARCH models
-
 ## References
 
 1. Box, G.E.P., Jenkins, G.M., Reinsel, G.C., & Ljung, G.M. (2015). *Time Series Analysis: Forecasting and Control*
@@ -469,7 +436,7 @@ AR(p) models are widely used in:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
